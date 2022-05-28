@@ -243,13 +243,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# Sepolicy - XiaomiParts
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy/private/xiaomi/devicesettings
-
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy/public/xiaomi/devicesettings
-
 # VINTF
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_MANIFEST_SKUS := ukee

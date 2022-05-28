@@ -1,4 +1,5 @@
 app_domain(devicesettings_app)
+typeattribute devicesettings_app mlstrustedsubject;
 
 # Allow devicesettings_app to find *_service
 allow devicesettings_app {
@@ -26,3 +27,6 @@ allow devicesettings_app {
   sysfs_leds
   sysfs_thermal
 }:{ file lnk_file } rw_file_perms;
+
+# Allow XiaomiParts to get settingsdebug.instant.packages prop
+get_prop(devicesettings_app, settingslib_prop)
