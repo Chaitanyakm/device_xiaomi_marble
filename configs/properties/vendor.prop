@@ -263,6 +263,16 @@ ro.sf.force_hwc_brightness=1
 persist.vendor.dc_backlight.enable=false
 persist.vendor.dc_backlight.threshold=0
 
+# Dolby
+ro.vendor.dolby.dax.version=DAX3_3.6.1.6_r1
+vendor.audio.dolby.ds2.enabled=true
+vendor.audio.dolby.ds2.hardbypass=false
+
+# Dolby & Audio Miui Props
+ro.vendor.audio.dolby.dax.support=true
+persist.vendor.audio.delta.refresh=true
+ro.vendor.audio.dolby.surround.enable=true
+
 # DPM
 persist.vendor.dpm.vndr.idletimer.mode=default
 persist.vendor.dpm.vndr.halservice.enable=1
