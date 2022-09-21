@@ -225,7 +225,6 @@ vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.comp_mask=0
 vendor.display.enable_optimize_refresh=0
-vendor.display.use_smooth_motion=0
 vendor.display.enable_dpps_dynamic_fps=1
 vendor.display.disable_stc_dimming=1
 vendor.display.idle_time=0
