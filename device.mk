@@ -166,6 +166,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0-impl \
