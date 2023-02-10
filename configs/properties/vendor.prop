@@ -403,11 +403,6 @@ ro.soc.manufacturer=QTI
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
-# Suspend properties
-suspend.short_suspend_threshold_millis=2000
-suspend.short_suspend_backoff_enabled=true
-suspend.max_sleep_time_millis=40000
-
 # USB
 persist.sys.usb.config=none
 vendor.usb.use_gadget_hal=0
