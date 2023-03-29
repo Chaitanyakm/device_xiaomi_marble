@@ -247,6 +247,7 @@ subsystem mem_buf_vm
 /dev/aud_pasthru_adsp     0660   system     audio
 /dev/msm_audio_ion_cma    0660   system     audio
 /dev/msm_audio_ion        0660   system     audio
+/dev/aud_pasthru_modem    0660   system     audio
 /dev/ttyHSL1              0660   system     system
 /dev/ttyHS1               0660   system     system
 /dev/mdm                  0660   system     radio
