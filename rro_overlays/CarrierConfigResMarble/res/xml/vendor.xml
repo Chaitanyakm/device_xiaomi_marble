@@ -7323,8 +7323,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <!-- Xiaomi changes end -->
 
-    <!-- PA: Enable Vo5G on Jio --> 
+    <!-- PA: Jio --> 
     <carrier_config mcc="405" mnc="840,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874">
+        <boolean name="editable_wfc_mode_bool" value="true" />
         <boolean name="vonr_enabled_bool" value="true" />
     </carrier_config>
 
