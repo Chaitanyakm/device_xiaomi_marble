@@ -71,6 +71,9 @@ on early-init
     export MEMTAG_OPTIONS off
     write /dev/memcg/camera/provider/memory.soft_limit_in_bytes 36818038505472
 
+    # Start audio adsp rpc daemon at early init stage
+    start vendor.audioadsprpcd_audiopd
+
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
