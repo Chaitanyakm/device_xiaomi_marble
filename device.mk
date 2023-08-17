@@ -260,10 +260,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.xiaomi \
-    android.hardware.health-service.xiaomi_recovery \
-    android.hardware.health@1.0.vendor \
-    android.hardware.health@2.1.vendor
+    android.hardware.health@2.1-impl-marble \
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
