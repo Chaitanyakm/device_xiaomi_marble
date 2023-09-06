@@ -86,5 +86,11 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service-->
+
+        <service
+            android:name=".display.ColorService"
+            android:permission="ColorService">
+        </service>
+
     </application>
 </manifest>
