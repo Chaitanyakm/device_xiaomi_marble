@@ -98,6 +98,9 @@
 /data/vendor/sla(/.*)?                                                    u:object_r:sla_data_file:s0
 /dev/socket/slad                                                          u:object_r:slad_socket:s0
 
+# SSG QMI Gateway Daemon
+/(vendor|system/vendor)/bin/ssgqmigd64		                          u:object_r:vendor_ssgqmigd_exec:s0
+
 # Thermal
 /vendor/bin/mi_thermald                                                   u:object_r:mi_thermald_exec:s0
 /data/vendor/thermal(/.*)?                                                u:object_r:thermal_data_file:s0
