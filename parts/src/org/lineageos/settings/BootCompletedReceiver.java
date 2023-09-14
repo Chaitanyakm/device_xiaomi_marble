@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import org.lineageos.settings.camera.NfcCameraService;
 import org.lineageos.settings.display.ColorService;
 import org.lineageos.settings.thermal.ThermalUtils;
 
@@ -31,5 +32,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // DisplayFeature
         ColorService.startService(context);
+
+        // NFC
+        NfcCameraService.startService(context);
     }
 }

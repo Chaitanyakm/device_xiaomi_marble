@@ -92,5 +92,10 @@
             android:permission="ColorService">
         </service>
 
+        <service
+            android:name=".camera.NfcCameraService"
+            android:permission="NfcCameraService">
+        </service>
+
     </application>
 </manifest>
