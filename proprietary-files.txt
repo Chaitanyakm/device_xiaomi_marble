@@ -1551,6 +1551,7 @@ vendor/lib64/soundfx/libhwdap.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libswspatializer.so
 vendor/lib64/soundfx/libswvqe.so
+vendor/lib64/soundfx/libdlbvol.so
 
 # Dolby vision
 system/lib/libdolbyottcontrol.so
