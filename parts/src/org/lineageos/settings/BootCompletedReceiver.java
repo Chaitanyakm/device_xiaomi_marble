@@ -25,12 +25,23 @@ import org.lineageos.settings.thermal.ThermalUtils;
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "XiaomiParts";
+    private static final String TAG = "XiaomiParts-BCR";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         ThermalUtils.startService(context);
+
+        Log.i(TAG, "Boot completed");
+
+        // Dolby Atmos
+        DolbyUtils.getInstance(context);
+
+        // Doze
+        // DozeUtils.checkDozeService(context);
+
+        // Pocket
+        // PocketService.startService(context);
 
         // DisplayFeature
         ColorService.startService(context);
@@ -38,19 +49,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // NFC
         NfcCameraService.startService(context);
 
-        // Pocket
-        PocketService.startService(context);
-
         // AOD
         AodBrightnessService.startService(context);
 
-        // Dolby Atmos
-        DolbyUtils.getInstance(context).onBootCompleted();
-
-        // Doze
-        // DozeUtils.checkDozeService(context);
-
-        // Refresh Rate
+        // Per app refresh Rate
         RefreshUtils.initialize(context);
     }
 }
