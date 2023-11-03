@@ -6,3 +6,6 @@ allow audioserver hal_audio_default:process signal;
 allow audioserver sound_device:chr_file rw_file_perms;
 get_prop(audioserver, bootanim_system_prop)
 set_prop(audioserver, audio_prop)
+
+allow audioserver unlabeled:file { read write open getattr };
+allow hal_audio_default hal_audio_default:process { execmem };
