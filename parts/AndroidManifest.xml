@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2021 The LineageOS Project
+                   2017-2023 The LineageOS Project
      Copyright (C) 2023 Paranoid Android
 
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="org.lineageos.settings"
     android:versionCode="1"
     android:versionName="1.0"
@@ -15,11 +16,17 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CAMERA_OPEN_CLOSE_LISTENER" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <application
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/device_settings_app_name"
+        android:label="@string/app_name"
         android:persistent="true"
         android:theme="@style/Theme.SubSettingsBase"
         android:defaultToDeviceProtectedStorage="true"
@@ -32,6 +39,11 @@
             </intent-filter>
         </receiver>
 
+        <provider
+            android:name=".SummaryProvider"
+            android:authorities="org.lineageos.settings.device.summary">
+        </provider>
+
         <service
             android:name=".thermal.ThermalService"
             android:exported="true"
@@ -41,8 +53,7 @@
         <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
-            android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase_v31">
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -57,11 +68,11 @@
                 android:value="1" />
         </activity>
 
-        <!--activity
+        <!--
+        <activity
             android:name=".dolby.DolbyActivity"
             android:exported="true"
-            android:label="@string/dolby_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/dolby_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
@@ -73,8 +84,8 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
-            <meta-data android:name="com.android.settings.summary"
-                       android:resource="@string/dolby_summary" />
+            <meta-data android:name="com.android.settings.summary_uri"
+                       android:value="content://org.lineageos.settings.device.summary/dolby" />
         </activity>
 
         <service
@@ -86,7 +97,8 @@
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </service-->
+        </service>
+        -->
 
         <service
             android:name=".display.ColorService"
@@ -97,6 +109,107 @@
             android:name=".camera.NfcCameraService"
             android:permission="NfcCameraService">
         </service>
+
+        <service
+            android:name=".doze.AodBrightnessService"
+            android:permission="AodBrightnessService">
+        </service>
+
+        <service
+            android:name=".doze.PocketService"
+            android:permission="PocketService">
+        </service>
+
+        <activity
+            android:name=".speaker.ClearSpeakerActivity" 
+            android:label="@string/clear_speaker_title"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/clear_speaker_summary" />
+        </activity>
+
+        <!--
+        <activity
+            android:name=".dirac.DiracActivity"
+            android:label="@string/dirac_title"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data 
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/dirac_summary" />
+        </activity>
+
+        <service
+            android:name=".dirac.DiracTileService"
+            android:icon="@drawable/ic_qs_dirac"
+            android:label="@string/dirac_title"
+            android:exported="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".doze.DozeService"
+            android:exported="true"
+            android:permission="DozeService">
+        </service>
+
+        <activity
+            android:name=".doze.DozeSettingsActivity"
+            android:label="@string/ambient_display_title"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".refreshrate.RefreshService"
+            android:exported="true"
+            android:permission="RefreshService">
+        </service>
+
+        <activity
+            android:name=".refreshrate.RefreshActivity"
+            android:label="@string/refresh_title"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/refresh_summary" />
+        </activity>
+
+        <service
+            android:name=".refreshrate.RefreshTileService"
+            android:icon="@drawable/ic_qs_refresh_rate"
+            android:label="@string/refresh_title"
+            android:exported="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        -->
 
     </application>
 </manifest>

@@ -7,6 +7,9 @@
 
 android_app {
     name: "XiaomiParts",
+    defaults: [
+        "SettingsLibDefaults",
+    ],
 
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
@@ -18,8 +21,12 @@ android_app {
     overrides: ["MusicFX"],
     static_libs: [
         "androidx.core_core",
+        "androidx.preference_preference",
         "org.lineageos.settings.resources",
-        "SettingsLib",
         "vendor.xiaomi.hardware.displayfeature-V1.0-java",
     ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 }
