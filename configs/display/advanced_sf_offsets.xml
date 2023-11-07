@@ -8,9 +8,13 @@ Confidential and Proprietary - Qualcomm Technologies, Inc.
     <DeviceSettingList>
         <DefaultDevice version="1"/>
         <Device version="1">
-            <FpsOffsetMap fps="90" SfDurationPercentage="136"/>
+<!--        <FpsOffsetMap fps="90" SfDurationPercentage="136"/>
             <FpsOffsetMap fps="120" SfDurationPercentage="148"/>
-            <FpsOffsetMap fps="144" SfDurationPercentage="140"/>
+            <FpsOffsetMap fps="144" SfDurationPercentage="140"/> -->
+            <FpsOffsetMap fps="60" SfDurationPercentage="94" AppDuration="16666666"/>
+            <FpsOffsetMap fps="90" SfDurationPercentage="118"/>
+            <FpsOffsetMap fps="120" SfDurationPercentage="124"/>
+            <FpsOffsetMap fps="144" SfDurationPercentage="149" AppDuration="10333333"/>
         </Device>
         <Device version="2">
             <FpsOffsetMap fps="90" SfDurationPercentage="145"/>
