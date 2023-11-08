@@ -232,6 +232,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Security
+BOOT_SECURITY_PATCH := 2023-07-05
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+
 # Sepolicy
 include device/qcom/sepolicy_vndr/sm8450/SEPolicy.mk
 
