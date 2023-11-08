@@ -1,0 +1,40 @@
+android_app_import {
+	name: "MlkitBarcodeUI",
+	owner: "google",
+	apk: "MlkitBarcodeUI.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+    overrides: [
+        "MlkitBarcodeUIPrebuilt",
+        ],
+	privileged: true,
+	product_specific: true,
+    required: [
+        "privapp_whitelist_com.google.android.apps.mlkit"
+    ],
+}
+
+android_app_import {
+	name: "VisionBarcode",
+	owner: "google",
+	apk: "VisionBarcode.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+    overrides: [
+        "VisionBarcodePrebuilt",
+        ],
+	privileged: true,
+	product_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.google.android.apps.mlkit",
+    product_specific: true,
+    sub_dir: "permissions",
+    src: "privapp_whitelist_com.google.android.apps.mlkit.xml",
+    filename_from_src: true,
+}
