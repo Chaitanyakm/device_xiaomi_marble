@@ -135,7 +135,6 @@
                 android:resource="@string/clear_speaker_summary" />
         </activity>
 
-        <!--
         <activity
             android:name=".dirac.DiracActivity"
             android:label="@string/dirac_title"
@@ -162,6 +161,7 @@
             </intent-filter>
         </service>
 
+        <!--
         <service
             android:name=".doze.DozeService"
             android:exported="true"
