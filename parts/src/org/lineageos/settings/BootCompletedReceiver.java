@@ -62,6 +62,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // DozeUtils.checkDozeService(context);
 
         // Refresh Rate
-        // RefreshUtils.initialize(context);
+        RefreshUtils.initialize(context);
     }
 }

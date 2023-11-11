@@ -177,6 +177,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        -->
 
         <service
             android:name=".refreshrate.RefreshService"
@@ -209,7 +210,6 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-        -->
 
     </application>
 </manifest>
