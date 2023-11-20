@@ -18,3 +18,7 @@ allow init debugfs_tracing_debug:dir mounton;
 allow vendor_init device:chr_file getattr;
 
 allow init sysfs_mmc_host:file rw_file_perms;
+
+# FPS info
+allow init vendor_sysfs_graphics:dir search;
+allow init vendor_sysfs_graphics:file rw_file_perms;

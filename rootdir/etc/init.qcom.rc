@@ -396,6 +396,10 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/aud_dev/state
     write /sys/devices/virtual/cvp/cvp/boot 1
 
+    # FPS info
+    chown system graphics /sys/class/drm/card0/sde-crtc-0/measured_fps
+    chmod 0666 /sys/class/drm/card0/sde-crtc-0/measured_fps
+
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
