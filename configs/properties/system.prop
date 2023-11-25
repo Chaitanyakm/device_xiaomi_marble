@@ -44,6 +44,9 @@ persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableQXDMLogs=1
 
+# LMK props
+ro.lmk.use_minfree_levels=true
+
 # Power-saving props
 ro.vendor.use_data_netmgrd=true
 ro.vold.umsdirtyratio=20
