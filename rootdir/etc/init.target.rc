@@ -596,3 +596,6 @@ on property:sys.volume.stream.music.device.bluetooth=*
 
 on property:sys.volume.stream.bluetoothsco=*
     setprop vendor.volume.stream.bluetoothsco ${sys.volume.stream.bluetoothsco}
+
+# Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
