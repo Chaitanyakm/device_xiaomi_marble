@@ -402,6 +402,9 @@ on property:sys.boot_completed=1
     setprop lmkd.reinit 1
     chown media audio /sys/kernel/aud_dev/state
     write /sys/devices/virtual/cvp/cvp/boot 1
+    # Restrict permissions to socket file 
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
