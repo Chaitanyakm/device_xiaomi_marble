@@ -1,6 +1,12 @@
 allow system_server vendor_hal_displayfeature_xiaomi_default:binder { call transfer };
 allow system_server vendor_hal_citsensorservice_xiaomi_default:binder { call transfer };
-allow system_server vendor_sysfs_battery_supply:file r_file_perms;
+
+# Allow system server battery supply rw access
+allow system_server vendor_sysfs_battery_supply:file rw_file_perms;
+
+# Allow system_server to read Fast Charging status
+allow system_server vendor_sysfs_battery_supply:file { getattr open read };
+
 allow system_server vendor_sysfs_graphics:file rw_file_perms;
 
 binder_call(system_server, vendor_hal_citsensorservice_xiaomi_default)
