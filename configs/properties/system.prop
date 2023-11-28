@@ -33,6 +33,18 @@ persist.sys.fuse.passthrough.enable=true
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
+# Improve global touch screen response
+debug.performance.tuning=1
+video.accelerate.hw=1
+view.touch_slop=1
+view.scroll_friction=0
+
+# Improve sliding response
+windowsmgr.max_events_per_sec=800
+view.scroll_friction=0
+ro.min_pointer_dur=0
+ro.min.pointer.dur=0
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
@@ -60,6 +72,9 @@ persist.log.tag.OpenGLRenderer=S
 
 # LMK props
 ro.lmk.use_minfree_levels=true
+
+# Open the first-in-first-out interface thread
+sys.use_fifo_ui=1
 
 # Power-saving props
 ro.vendor.use_data_netmgrd=true
@@ -105,6 +120,10 @@ persist.vendor.ssr.enable_ramdumps=1
 
 # System prop for NFC DT
 ro.nfc.port=I2C
+
+# Turn off vertical sync (V-Sync)
+debug.hwui.disable_vsync=true
+persist.sys.ui.hw=1
 
 # WiFi display
 persist.debug.wfd.enable=1
