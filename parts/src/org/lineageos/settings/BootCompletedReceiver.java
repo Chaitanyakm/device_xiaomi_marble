@@ -14,7 +14,6 @@ import android.content.Intent;
 import android.util.Log;
 
 import org.lineageos.settings.camera.NfcCameraService;
-import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.display.ColorService;
 import org.lineageos.settings.dolby.DolbyUtils;
 import org.lineageos.settings.doze.AodBrightnessService;
@@ -44,13 +43,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // AOD
         AodBrightnessService.startService(context);
-
-        // Dirac
-        try {
-            DiracUtils.getInstance(context);
-        } catch (Exception e) {
-            Log.d(TAG, "Dirac is not present in system");
-        }
 
         // Dolby Atmos
         DolbyUtils.getInstance(context).onBootCompleted();
