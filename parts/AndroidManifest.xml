@@ -68,7 +68,6 @@
                 android:value="1" />
         </activity>
 
-        <!--
         <activity
             android:name=".dolby.DolbyActivity"
             android:exported="true"
@@ -98,7 +97,6 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-        -->
 
         <service
             android:name=".display.ColorService"

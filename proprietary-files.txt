@@ -1531,7 +1531,27 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib/libsdedrm.so|932f321d4168e4fb91b449899ff1544710bf49c1
 vendor/lib64/libsdedrm.so|cb159b4ea1b98cf192e7ffb582d135b7f229579b
 
-# Dolby music
+# Dolby Atmos
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/lib/libdapparamstorage.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswvqe.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/libdeccfg.so
+vendor/lib64/libstagefright_soft_ac4dec.so
+vendor/lib64/libstagefright_soft_ddpdec.so
+
+# Dolby vision
 system/lib/libdolbyottcontrol.so
 system/lib/libdovi_omx.so
 system/lib64/libdolbyottcontrol.so
