@@ -169,6 +169,8 @@ function blob_fixup() {
         ;;
         system/lib64/libcamera_mianode_jni.xiaomi.so|system/lib64/libcamera_algoup_jni.xiaomi.so|system/lib64/libmicampostproc_client.so)
         "${PATCHELF}" --replace-needed "libui.so" "libui_camera.so" "${2}"
+    vendor/lib64/libdlbdsservice.so | vendor/lib64/soundfx/libhwdap.so)
+        "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
         ;;
     esac
 }
