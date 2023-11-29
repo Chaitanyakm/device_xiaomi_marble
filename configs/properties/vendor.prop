@@ -61,6 +61,7 @@ vendor.audio.spkcal.copy.inhal=true
 ro.vendor.audio.ring.filter=true
 persist.vendor.audio.misound.disable=true
 persist.vendor.audio.auto.scenario=true
+ro.audio.spatializer_enabled=true
 ro.vendor.audio.miui.karaoke.show=false
 ro.vendor.audio.miui.karaoke.tencent.show=false
 ro.vendor.audio.feature.fade=true

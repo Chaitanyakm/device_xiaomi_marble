@@ -1492,7 +1492,6 @@ vendor/etc/display/DPU830.xml
 vendor/etc/display/DPU860.xml
 vendor/etc/display/DPU8__.xml
 vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/backlight_calib_r66451_amoled_cmd_mode_dsi_visionox_panel_with_DSC.xml
 vendor/etc/display/backlight_calib_r66451_amoled_video_mode_dsi_visionox_panel_with_DSC.xml
 vendor/etc/display/qdcm_calib_data_nt36672e_lcd_video_mode_dsi_novatek_panel_with_DSC.json
@@ -1539,16 +1538,19 @@ vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
 vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
 vendor/lib/libdapparamstorage.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
-vendor/lib64/soundfx/libhwdap.so
-vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libswvqe.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libstagefright_soft_ac4dec.so
 vendor/lib64/libstagefright_soft_ddpdec.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdlbpreg.so
+vendor/lib64/libspatializerparamstorage.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswspatializer.so
+vendor/lib64/soundfx/libswvqe.so
 
 # Dolby vision
 system/lib/libdolbyottcontrol.so
