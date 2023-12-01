@@ -296,8 +296,8 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.color_mode=0
-persist.sys.sf.native_mode=258
 debug.hwui.renderer=opengl
+persist.sys.sf.native_mode=2
 debug.sf.hw=0
 debug.sdm.support_writeback=0
 debug.sf.auto_latch_unsignaled=false
