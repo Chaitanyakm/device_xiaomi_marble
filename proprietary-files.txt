@@ -1088,6 +1088,7 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
 # CIT Sensor
+odm/etc/cit_param_config.json
 vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
 vendor/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
