@@ -1569,6 +1569,7 @@ system/lib64/libdolbyottcontrol.so
 system/lib64/libdovi_omx.so
 vendor/bin/hw/dolbycodec2
 vendor/etc/dolby_vision.cfg
+vendor/etc/media_codecs_with_dolby_taro.xml
 vendor/lib/libdeccfg.so
 vendor/lib/libstagefright_soft_ac4dec.so
 vendor/lib/libstagefright_soft_ddpdec.so
