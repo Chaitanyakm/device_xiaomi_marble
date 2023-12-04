@@ -1534,24 +1534,12 @@ vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
 vendor/lib/libdapparamstorage.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/libdeccfg.so
 vendor/lib64/libstagefright_soft_ac4dec.so
 vendor/lib64/libstagefright_soft_ddpdec.so
-vendor/lib64/libdapparamstorage.so
-vendor/lib64/libdlbpreg.so
-vendor/lib64/libspatializerparamstorage.so
-vendor/lib64/soundfx/libhwdap.so
-vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libswspatializer.so
-vendor/lib64/soundfx/libswvqe.so
-vendor/lib64/soundfx/libdlbvol.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Media (Dolby C2 Audio) - from fuxi
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service
@@ -1561,18 +1549,21 @@ vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_ddpdec.so
 vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libdeccfg.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libspatializerparamstorage.so
+vendor/lib64/libdlbpreg.so
+vendor/lib64/soundfx/libdlbvol.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswspatializer.so
+vendor/lib64/soundfx/libswvqe.so
 
 # Dolby vision
-system/lib/libdolbyottcontrol.so
-system/lib/libdovi_omx.so
 system/lib64/libdolbyottcontrol.so
 system/lib64/libdovi_omx.so
 vendor/bin/hw/dolbycodec2
 vendor/etc/dolby_vision.cfg
 vendor/etc/media_codecs_with_dolby_taro.xml
-vendor/lib/libdeccfg.so
-vendor/lib/libstagefright_soft_ac4dec.so
-vendor/lib/libstagefright_soft_ddpdec.so
 vendor/lib64/c2.dolby.avc.dec.so
 vendor/lib64/c2.dolby.avc.sec.dec.so
 vendor/lib64/c2.dolby.client.so
