@@ -227,7 +227,6 @@ vendor.display.enable_fp_monitor=1
 vendor.display.enable_hist_intr=1
 vendor.display.disable_3d_adaptive_tm=0
 vendor.display.use_layer_ext=0
-vendor.display.disable_rotator_downscale=1
 vendor.display.qdcm.disable_factory_mode=1
 vendor.display.qdcm.mode_combine=1
 
