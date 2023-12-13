@@ -365,6 +365,7 @@ debug.stagefright.c2inputsurface=-1
 ro.mediaserver.64b.enable=true
 debug.stagefright.ccodec=4
 persist.mm.enable.prefetch=true
+vendor.media.omx=0
 vendor.mm.enable.qcom_parser=16777215
 
 # Misc
