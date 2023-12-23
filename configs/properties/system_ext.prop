@@ -44,3 +44,6 @@ telephony.active_modems.max_count=2
 # Media
 media.settings.xml=/vendor/etc/media_profiles_ukee.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# Vsync
+ro.sf.use_latest_hwc_vsync_period=0

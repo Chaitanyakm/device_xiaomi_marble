@@ -124,6 +124,7 @@ ro.nfc.port=I2C
 # Turn off vertical sync (V-Sync)
 debug.hwui.disable_vsync=true
 persist.sys.ui.hw=1
+hwui.render_dirty_regions=false
 
 # WiFi display
 persist.debug.wfd.enable=1

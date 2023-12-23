@@ -204,7 +204,13 @@ ro.hardware.camera=xiaomi
 persist.sys.miui.camera.version=2.7
 persist.sys.miui.camera.boost.killAdj_threshold=100
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # Display
+debug.cpurend.vsync=false
+ro.hwui.render_ahead=30
+debug.sf.enable_transaction_tracing=false
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.enable_early_wakeup=1
 vendor.display.enable_async_vds_creation=0
@@ -244,7 +250,7 @@ ro.vendor.display.type=oled
 ro.vendor.xiaomi.bl.poll=true
 ro.vendor.whitepoint_calibration_enable=false
 ro.vendor.histogram.enable=true
-ro.vendor.cabc.enable=fasle
+ro.vendor.cabc.enable=false
 ro.vendor.bcbc.enable=true
 ro.vendor.dfps.enable=false
 ro.vendor.fps.switch.default=true
@@ -298,9 +304,10 @@ persist.sys.sf.color_mode=0
 debug.hwui.renderer=opengl
 persist.sys.sf.native_mode=2
 debug.sf.hw=0
+debug.egl.hw=0
 debug.sdm.support_writeback=0
 debug.sf.auto_latch_unsignaled=false
-debug.sf.disable_client_composition_cache=1
+debug.sf.disable_client_composition_cache=0
 debug.sf.disable_backpressure=1
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_advanced_sf_phase_offset=1

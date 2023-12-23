@@ -19,4 +19,12 @@
 <resources>
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
     <string name="def_device_name_simple">Redmi Note 12 Turbo</string>
+
+    <string-array name="configs_base">
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+
+        <!-- Allow more cached apps in the background -->
+        <item>activity_manager/max_cached_processes=256</item>
+    </string-array>
 </resources>
