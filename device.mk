@@ -338,6 +338,8 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0 \
+    android.hardware.media.omx@1.0.vendor \
     android.hardware.media.c2@1.2.vendor \
     libavservices_minijail \
     libavservices_minijail.vendor \
@@ -347,9 +349,19 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.2.vendor \
     libcodec2_soft_common.vendor \
     libcodec2_vndk.vendor \
+    libmedia_omx \
+    libmedia_omx.vendor \
     libminijail \
     libminijail.vendor \
-    libsfplugin_ccodec_utils.vendor
+    libsfplugin_ccodec_utils.vendor \
+    libstagefright_bufferqueue_helper \
+    libstagefright_bufferqueue_helper.vendor \
+    libstagefright_omx \
+    libstagefright_omx.vendor \
+    libstagefright_omx_utils \
+    libstagefright_omx_utils.vendor \
+    libstagefright_xmlparser \
+    libstagefright_xmlparser.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -660,6 +672,7 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # VNDK
 PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
     prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 # WiFi
