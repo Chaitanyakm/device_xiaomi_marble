@@ -10,9 +10,9 @@
 
 #include "vendor_init.h"
 
-#define FINGERPRINT_GL "POCO/marble_global/marble:13/SKQ1.221022.001/V14.0.8.0.TMRMIXM:user/release-keys"
+#define FINGERPRINT_GL "POCO/marble_global/marble:12/SKQ1.230401.001/V816.0.2.0.UMRMIXM:user/release-keys"
 #define FINGERPRINT_CN "Redmi/marble/marble:13/SKQ1.221022.001/V14.0.25.0.TMRCNXM:user/release-keys"
-#define FINGERPRINT_IN "POCO/marblein/marblein:13/SKQ1.221022.001/V14.0.6.0.TMRINXM:user/release-keys"
+#define FINGERPRINT_IN "POCO/marblein/marblein:12/SKQ1.230401.001/V816.0.3.0.UMRINXM:user/release-keys"
 
 static const variant_info_t marble_global_info = {
     .hwc_value = "GL",

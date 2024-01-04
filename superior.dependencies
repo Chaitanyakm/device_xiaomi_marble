@@ -12,9 +12,10 @@
         "remote": "github"
     },
     {
-        "repository": "device_xiaomi_marble-kernel",
+        "repository": "Chaitanyakm/device_xiaomi_marble-kernel",
         "target_path": "device/xiaomi/marble-kernel",
-        "branch": "fourteen"
+        "branch": "non-ksu",
+        "remote": "github"
     },
     {
         "repository": "Chaitanyakm/hardware_xiaomi",
