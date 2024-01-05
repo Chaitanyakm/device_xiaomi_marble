@@ -60,7 +60,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.3-impl \
     audio.primary.default \
-    audio.primary.msmnile
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -71,22 +70,13 @@ PRODUCT_PACKAGES += \
     audioadsprpcd \
     audio.r_submix.default \
     audio.usb.default \
-    liba2dpoffload \
     libaudioroute \
     libbatterylistener \
-    libcirrusspkrprot \
-    libcomprcapture \
-    libexthwplugin \
-    libhdmiedid \
-    libhfp \
     libhfp_pal \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libsndcardparser \
-    libsndmonitor \
-    libspkrprot \
-    libssrec \
     libtinycompress \
     libvolumelistener \
     vendor.qti.hardware.pal@1.0.vendor \
@@ -121,7 +111,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-impl \
     libldacBT_abr \
-    libldacBT_bco \
     libldacBT_enc \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
@@ -174,10 +163,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@3.0-impl \
-    android.hardware.graphics.allocator@4.0-impl \
     android.hardware.graphics.common@1.2 \
-    android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
@@ -383,21 +369,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
-# OMX
-PRODUCT_PACKAGES += \
-    libOmxCore \
-    libstagefrighthw
-
-PRODUCT_PACKAGES += \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc
-
-# Mlipay
-PRODUCT_PACKAGES += \
-    IFAAService
 
 # Network
 PRODUCT_PACKAGES += \
@@ -423,7 +394,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     AospWifiResOverlayMarble \
-    ApertureOverlayMarble \
     CarrierConfigResMarble \
     FrameworksResCommon \
     FrameworksResOverlayMarble \
