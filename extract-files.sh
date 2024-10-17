@@ -35,6 +35,26 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --replace-needed "audio.primary.taro.so" "audio.primary.taro-marble.so" "${2}"
             ;;
+        vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF_0_17_2}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            ;;
+        vendor/lib/c2.dolby.client.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF_0_17_2}" --add-needed "libcodec2_hidl_shim.so" "${2}"
+            ;;
+        vendor/lib64/c2.dolby.client.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF_0_17_2}" --add-needed "libcodec2_hidl_shim.so" "${2}"
+            ;;
+        vendor/bin/hw/dolbycodec2 | vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service | vendor/bin/hw/vendor.dolby.media.c2@1.0-service)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF_0_17_2}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            ;;
+        vendor/lib64/hw/audio.primary.taro-marble.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF_0_17_2}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            ;;
         *)
             return 1
             ;;
