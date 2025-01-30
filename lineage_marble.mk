@@ -7,8 +7,20 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common lineage configuration
+# Inherit from common Matrixx configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_DISABLE_EPPE := true
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_64_BIT_APPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Matrixx
+MATRIXX_BUILD_TYPE := Official
+MATRIXX_CHIPSET := SM7475
+MATRIXX_BATTERY := 5000mAh
+MATRIXX_DISPLAY := 1080x2400
+WITH_GMS := true
+TARGET_INCLUDE_NEXUS := true
 
 PRODUCT_NAME := lineage_marble
 PRODUCT_DEVICE := marble
