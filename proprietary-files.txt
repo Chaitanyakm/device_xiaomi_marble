@@ -963,8 +963,8 @@ vendor/firmware/evautil64.mdt
 # Display configs
 product/etc/displayconfig/display_id_4630946370515662722.xml
 product/etc/displayconfig/display_id_4630946480857061762.xml
-vendor/etc/display/qdcm_calib_data_xiaomi_36_02_0a_video_mode_dsc_dsi_panel.json
-vendor/etc/display/qdcm_calib_data_xiaomi_36_0d_0b_video_mode_dsc_dsi_panel.json
+vendor/etc/display/qdcm_calib_data_xiaomi_36_02_0a_video_mode_dsc_dsi_panel.json|b275f6774a3add7c148cc0eda7f39805ae8bbb36 
+vendor/etc/display/qdcm_calib_data_xiaomi_36_0d_0b_video_mode_dsc_dsi_panel.json|a7c58f424b824811016f411d53abef1f1568df07
 vendor/etc/mdss_dsi_m16t_36_02_0a_dsc_vid_mi.xml
 vendor/etc/mdss_dsi_m16t_36_0d_0b_dsc_vid_mi.xml
 vendor/lib64/libdisplayconfig.qti.so
