@@ -72,6 +72,10 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/com.qti.feature2.anchorsync.so',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    (
+	'vendor/bin/hw/mfp-daemon',
+    ): blob_fixup()
+	.replace_needed('libstagefright_foundation.so','libstagefright_foundation-v33.so'),
 }
 
 module = ExtractUtilsModule(
